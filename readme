@@ -1,0 +1,17 @@
+------------------------------
+Live Variable Analysis in LLVM
+------------------------------
+
+1. Create .ll file
+    clang -S -emit-llvm filename.c -o filename.ll
+
+2. Build
+    make
+
+3. Run
+    opt -instnamer -load ./pass_LVA.so -LVA < ./tests/"filename".ll > /dev/null
+
+
+@Thank you for reading!
+@Author: Sambhrant Maurya
+@samaurya@cse.iitk.ac.in
